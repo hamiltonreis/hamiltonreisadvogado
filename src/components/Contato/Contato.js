@@ -1,10 +1,13 @@
 import React from 'react';
 import { FaWhatsapp } from "react-icons/fa"
 import Mask from '../../modules/phonemask';
+import { useForm } from '@formspree/react';
 
 import './Contato.css';
 
 const Contato = () => {
+	const [state, handleSubmit] = useForm("mblpvaog");
+
 	const loadMask = (input) => {
 		const phoneMask = new Mask(input);
 		phoneMask.mask();
@@ -54,26 +57,35 @@ const Contato = () => {
 						</div>
 						<div className="mapa"></div>
 					</div>
-					<div className="contato-right">
-						<h2>Enviar uma mensagem</h2>
-						<form id="form" action="" method="POST">
-							<input className="form nome" type="text" name="nome" placeholder="Seu nome..." required />
-							<input className="form email" type="email" name="email" placeholder="Seu e-mail..." required />
-							<input className="form tel" id="fone" type="tel" maxLength="14" minLength="13" name="telefone" placeholder="Telefone p/ contato..." onFocus={handleFocus} />
-							<input className="form assu" type="text" name="assunto" placeholder="Assunto..." required />
-							<textarea className="form msg" name="mensagem" placeholder="Sua mensagem..." required ></textarea>
-							<input type="submit" value="Enviar" id="send" />
-							<div className="alert-submit">
-								<p id="msg-sended">Mensagem enviada com sucesso! Responderemos em breve.</p>
-								<p id="msg-error">Erro: mensagem NÃO enviada. Favor conferir os dados informados ou tente novamente mais tarde.</p>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div id="anchor-Duvidas"></div>
-		</section>
-	);
+					{/* INÍCIO DO FORMULÁRIO */}
+                    <div className="contato-right">
+                        <h2>Enviar uma mensagem</h2>                    
+                        <form id="form" onSubmit={handleSubmit}>
+                            
+                            <input className="form nome" type="text" name="nome" placeholder="Seu nome..." required />
+                            <input className="form email" type="email" name="email" placeholder="Seu e-mail..." required />
+                            <input className="form tel" id="fone" type="tel" maxLength="14" minLength="13" name="telefone" placeholder="Telefone p/ contato..." onFocus={handleFocus} />
+                            <input className="form assu" type="text" name="assunto" placeholder="Assunto..." required />
+                            <textarea className="form msg" name="mensagem" placeholder="Sua mensagem..." required ></textarea>
+                            <input type="submit" value="Enviar" id="send" disabled={state.submitting} />
+                            
+                            <div className="alert-submit">
+                                {state.succeeded && (
+                                    <p id="msg-sended">Mensagem enviada com sucesso! Responderemos em breve.</p>
+                                )}
+                                
+                                {state.errors && (
+                                    <p id="msg-error">Erro: mensagem NÃO enviada. Tente novamente.</p>
+                                )}
+                            </div>
+                        </form>
+                    </div>
+                    {/* FIM DO FORMULÁRIO */}
+                </div>
+            </div>
+            <div id="anchor-Duvidas"></div>
+        </section>
+    );
 }
 
 export default Contato;
