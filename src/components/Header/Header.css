@@ -6,8 +6,6 @@ header {
   position: fixed;
   border-bottom: 5px solid rgb(168, 168, 168);
   z-index: 99;
-  /* Garante que o logo cortado não vaze */
-  overflow: hidden; 
 }
 
 .fix-header {
@@ -17,8 +15,7 @@ header {
 .header-left {
   width: 40%;
   display: flex;
-  /* Adicionado para centralizar o 'a' tag do logo */
-  align-items: center;
+  overflow: hidden;
 }
 
 .header-left img {
@@ -44,7 +41,6 @@ header {
 @media (max-width: 768px) {
   .header-left {
     width: 60%;
-    align-items: center;
   }
 
   .header-right {
