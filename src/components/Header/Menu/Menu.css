@@ -3,51 +3,65 @@
   text-align: right;
 }
 
-.menu-desktop ul{
-	list-style-type: none;
-	display: inline-flex;
+.menu-desktop ul {
+  list-style-type: none;
+  display: inline-flex;
 }
 
-.menu-desktop ul li{
-	margin: 0 10px;
+.menu-desktop ul li {
+  margin: 0 10px;
 }
 
-.menu-desktop ul li a{
-	color: white;
-	font-size: 18px;
-	text-decoration: none;
-	padding: 13px;
+.menu-desktop ul li a {
+  /* MUDANÇA: Cor cinza-claro padronizada */
+  color: #CCCCCC;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 13px;
+  border-radius: 8px; /* Borda suave */
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.menu-desktop ul li a:hover{
-	background: radial-gradient(rgba(200,200,200,0.4) 35%, rgba(0,0,0,0.8) 65%);
+.menu-desktop ul li a:hover {
+  /* MUDANÇA: Efeito hover moderno */
+  background-color: #1a1a1a;
+  color: #25d366; /* Verde do seu tema */
 }
 
-.menu-mobile{
-	display: none;
-	width: 300px;
-	position: absolute;
-	right: 0;
-	top: 110px;
-	background: black;
-	text-align: center;
-	border-bottom: 5px solid rgb(168, 168, 168);
+.menu-mobile {
+  display: none;
+  width: 300px;
+  position: absolute;
+  right: 0;
+  top: 110px; /* Ajuste para header de 115px */
+  background: black;
+  text-align: center;
+  border-bottom: 5px solid rgb(168, 168, 168);
+  border-left: 1px solid #333; /* Borda sutil */
 }
 
-.menu-mobile ul li{
-	padding: 10px 0;
-	list-style-type: none;
+.menu-mobile ul li {
+  padding: 10px 0;
+  list-style-type: none;
+  border-bottom: 1px solid #222; /* Separador de links */
+}
+.menu-mobile ul li:last-child {
+    border-bottom: none;
 }
 
-.menu-mobile ul li a{
-	text-decoration: none;
-	color: white;
-	font-size: 16px;
-	padding: 10px;
+.menu-mobile ul li a {
+  text-decoration: none;
+  color: #CCCCCC;
+  font-size: 16px;
+  padding: 10px;
+  display: block; /* Faz o link ocupar a linha toda */
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.menu-mobile ul li a:hover{
-	background: radial-gradient(rgba(200,200,200,0.5) 35%, rgba(0,0,0,0.8) 65%);
+.menu-mobile ul li a:hover {
+  /* MUDANÇA: Efeito hover moderno */
+  background-color: #1a1a1a;
+  color: #25d366;
 }
 
 .icon-menu-mob {
@@ -55,23 +69,32 @@
   height: 40px;
   display: none;
   margin: 15px;
+  /* Adicionado para centralizar o <svg> */
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
-.icon-menu-mob > i {
-  font-size: 38px;
+/* MUDANÇA: Seletor 'i' trocado por 'svg' */
+.icon-menu-mob > svg {
+  font-size: 32px; /* Tamanho ajustado */
   color: white;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+.icon-menu-mob > svg:hover {
+    color: #25d366; /* Hover verde */
 }
 
 @media (max-width: 1400px) {
-	.menu-desktop ul li {
-		margin: 0 5px;
-	}
+  .menu-desktop ul li {
+    margin: 0 5px;
+  }
 
-	.menu-desktop ul li a {
-		font-size: 16px;
-		padding: 8px;
-	}
+  .menu-desktop ul li a {
+    font-size: 16px;
+    padding: 8px;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -80,7 +103,7 @@
   }
 
   .icon-menu-mob {
-    display: block;
+    display: flex; /* MUDANÇA: de 'block' para 'flex' */
   }
 }
 
@@ -89,13 +112,13 @@
     margin: 15px 0px 10px 10px;
   }
 
-	.menu-mobile {
-		top: 75px;
-	}
+  .menu-mobile {
+    top: 75px; /* Ajuste para header de 80px */
+  }
 }
 
 @media (max-width: 360px) {
-	.menu-mobile {
-		width: 250px;
-	}
-} 
+  .menu-mobile {
+    width: 250px;
+  }
+}

@@ -1,0 +1,82 @@
+/* Estilo da seção principal */
+.o-advogado {
+  padding: 60px 0;
+  color: #CCCCCC;
+}
+
+/* Container que alinha a imagem e o texto */
+.advogado-content {
+  display: flex;
+  align-items: center; 
+  gap: 40px; 
+  padding: 0 20px;
+}
+
+/* Container da imagem */
+.advogado-img {
+  flex: 1; 
+  max-width: 400px; 
+}
+
+.advogado-img img {
+  width: 100%;
+  aspect-ratio: 1 / 1;  
+  object-fit: cover;    
+  border-radius: 15px;  
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Container do texto */
+.advogado-text {
+  flex: 2;
+  text-align: left;
+}
+
+.advogado-text h2 {
+  font-size: 2rem; 
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #FFFFFF; 
+}
+
+.advogado-text h3 {
+  font-size: 1.15rem; 
+  font-weight: 600;
+  font-style: italic;
+  color: #DDDDDD;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.advogado-text p {
+  font-size: 1.1rem; 
+  line-height: 1.7; 
+  margin-bottom: 15px;
+  text-align: justify; /* <-- ADICIONADO: Texto justificado */
+}
+
+/* Ajuste para telas menores (mobile) */
+@media (max-width: 768px) {
+  .advogado-content {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .advogado-img {
+    max-width: 300px; 
+    margin-bottom: 20px;
+  }
+
+  .advogado-text {
+    /* O flex: 2; não se aplica aqui, volta ao normal */
+    text-align: justify; /* <-- ADICIONADO: Justificado no mobile também */
+  }
+
+  .advogado-text h2 {
+    text-align: center;
+  }
+  
+  .advogado-text h3 {
+    text-align: center;
+  }
+}

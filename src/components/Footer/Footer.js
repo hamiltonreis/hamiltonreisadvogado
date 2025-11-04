@@ -1,52 +1,75 @@
 import React from 'react';
+// Importa os ícones que vamos usar
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
 
 import './Footer.css';
 
 const Footer = () => {
-	return (
-		<section className="footer">
-			<div className="container">
-				<div className="box-footer">
-					<div className="box-footer-single bfs1">
-						<h2>Telefone / Whatsapp:<br />
-							(84) 98826-1791</h2>
-					</div>
-					<div className="box-footer-single bfs2">
-						<h2>Redes sociais:</h2>
-						<span className="sm-icons-footer">
-							<a target="_blank" title="Nossa página no Facebook" href="https://facebook.com" rel="noreferrer">
-								<i className="fa fa-facebook" aria-hidden="true"></i>
-							</a>
-							<a target="_blank" title="Nosso perfil no Instagram" href="https://instagram.com/hamiltonreis.adv" rel="noreferrer">
-								<i className="fa fa-instagram" aria-hidden="true"></i>
-							</a>
-						</span>
-					</div>
-					<div className="box-footer-single bfs3">
-						<h2>Links úteis:</h2>
-						<ul>
-							<li>
-								<a target="_blank" href="https://www.oabpb.org.br" rel="noreferrer">Ordem dos Advogados do Brasil - OAB Paraíba</a>
-							</li>
-							<li>
-								<a target="_blank" href="https://www.mp.pb.gov.br/" rel="noreferrer">Ministério Público da Paraíba</a>
-							</li>
-							<li>
-								<a target="_blank" href="http://www.defensoria.pb.def.br/" rel="noreferrer">Defensoria Pública da Paraíba</a>
-							</li>
-							<li>
-								<a target="_blank" href="https://www.tjpb.jus.br/" rel="noreferrer">Tribunal de Justiça da Paraíba</a>
-							</li>
-							<li>
-								<a target="_blank" href="https://www.juizdefora.pgj.pb.gov.br/atendimento-criminal" rel="noreferrer">Atendimento Criminal - PGJ PB</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<small>Todos os direitos reservados. Criado por Proletec Soluções em TI.</small>
-		</section>
-	);
+    // Pega o ano atual automaticamente para o copyright
+    const currentYear = new Date().getFullYear();
+
+    return (
+        // Tag <footer> é semanticamente melhor que <section>
+        <footer className="footer">
+            <div className="container">
+                <div className="box-footer">
+                    
+                    {/* COLUNA 1: CONTATO */}
+                    <div className="box-footer-single bfs1">
+                        <h2>Contato Imediato</h2>
+                        {/* Link clicável do WhatsApp (igual ao da seção Contato) */}
+                        <a
+                            href="https://wa.me/5584988261791"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="whatsapp-link"
+                        >
+                            <FaWhatsapp className="whatsapp-icon" />
+                            (84) 98826-1791
+                        </a>
+                    </div>
+
+                    {/* COLUNA 2: REDES SOCIAIS */}
+                    <div className="box-footer-single bfs2">
+                        <h2>Redes sociais</h2>
+                        <div className="sm-icons-footer">
+                            {/* Ícone do Instagram com react-icons */}
+                            <a target="_blank" title="Perfil no Instagram" href="https://instagram.com/hamiltonreis.adv" rel="noreferrer">
+                                <FaInstagram />
+                            </a>
+                            {/* Link quebrado do Facebook removido */}
+                        </div>
+                    </div>
+
+                    {/* COLUNA 3: LINKS ÚTEIS (Estrutura mantida) */}
+                    <div className="box-footer-single bfs3">
+                        <h2>Links úteis:</h2>
+                        <ul>
+                            <li>
+                                <a target="_blank" href="https://www.oabpb.org.br" rel="noreferrer">OAB Paraíba</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.mp.pb.gov.br/" rel="noreferrer">Ministério Público da Paraíba</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.defensoria.pb.def.br/" rel="noreferrer">Defensoria Pública da Paraíba</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.tjpb.jus.br/" rel="noreferrer">Tribunal de Justiça da Paraíba</a>
+                            </li>
+                            {/* Link quebrado 'juizdefora' removido. Se precisar, pode adicionar outro. */}
+                        </ul>
+                    </div>
+                </div>
+
+                {/* COPYRIGHT ATUALIZADO */}
+                <div className="copyright">
+                    <small>Hamilton Reis Advocacia Criminal &copy; {currentYear}. Todos os direitos reservados.</small>
+                    <small>Desenvolvido por Proletec Soluções em TI.</small>
+                </div>
+            </div>
+        </footer>
+    );
 }
 
 export default Footer;

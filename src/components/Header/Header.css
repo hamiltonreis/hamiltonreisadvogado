@@ -1,57 +1,62 @@
 header {
-	width: 100%;
-	height: 115px;
-	padding: 0 3%;
-	background-color: black;
-	position: fixed;
-	border-bottom: 5px solid rgb(168, 168, 168);
-	z-index: 99;
+  width: 100%;
+  height: 115px;
+  padding: 0 3%;
+  background-color: black;
+  position: fixed;
+  border-bottom: 5px solid rgb(168, 168, 168);
+  z-index: 99;
+  /* Garante que o logo cortado não vaze */
+  overflow: hidden; 
 }
 
 .fix-header {
-	height: 115px;
+  height: 115px;
 }
 
-.header-left{
-	width: 40%;
-	display: flex;
+.header-left {
+  width: 40%;
+  display: flex;
+  /* Adicionado para centralizar o 'a' tag do logo */
+  align-items: center;
 }
 
 .header-left img {
-	max-height: 100%;
+  /* REMOVIDO: 'max-height: 100%;'
+    Esta era a linha que causava o problema. 
+  */
 }
 
-.header-right{
-	width: 60%;
-	justify-content: right;
-	display: flex;
-	flex-direction: column-reverse;
+.header-right {
+  width: 60%;
+  justify-content: right;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 @media (max-width: 1080px) {
-	.header-right {
-		flex-direction: row-reverse;
-		align-items: center;
-	}
+  .header-right {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
-	.header-left {
-		width: 60%;
-		align-items: center;
-	}
+  .header-left {
+    width: 60%;
+    align-items: center;
+  }
 
-	.header-right {
-		width: 40%;
-	}
+  .header-right {
+    width: 40%;
+  }
 
-	header,
-	.fix-header {
-		height: 80px;
-	}
+  header,
+  .fix-header {
+    height: 80px;
+  }
 
-	.header-left img {
-		max-width: 100%;
-		max-height: 78px;
-	}
+  .header-left img {
+     /* Esta regra não é mais necessária aqui */
+  }
 }

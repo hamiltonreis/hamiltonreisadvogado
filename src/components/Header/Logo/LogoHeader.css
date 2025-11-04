@@ -1,18 +1,31 @@
 .logo-img {
-    width: auto;       /* tamanho padrão para desktop */
-    height: auto;       /* mantém proporção */
-    max-width: 150%;    /* não ultrapassa o container */
+  /* Trocamos de 'auto' para uma altura fixa MAIOR que o header */
+  height: 190px;
+  width: auto; /* Mantém a proporção quadrada */
+
+  /* Centraliza a imagem verticalmente */
+  /* (190px da imagem - 115px do header) / 2 = 37.5px */
+  margin-top: -37.5px;
+  
+  max-width: 100%; /* Mantém o limite */
 }
 
-/* Ajuste para telas menores (mobile) */
+/* --- AJUSTE MOBILE --- */
+/* No mobile, o header tem 80px */
 @media (max-width: 768px) {
-    .logo-img {
-        width: 120px;   /* menor em tablets e celulares */
-    }
+  .logo-img {
+    /* (130px da imagem - 80px do header) / 2 = 25px */
+    height: 130px;
+    margin-top: -25px;
+    width: auto; /* Garante que 'width' não seja herdado */
+  }
 }
 
 @media (max-width: 480px) {
-    .logo-img {
-        width: 100px;   /* ainda menor para smartphones */
-    }
+  .logo-img {
+    /* Mantém o mesmo tamanho do mobile anterior */
+    height: 130px;
+    margin-top: -25px;
+    width: auto;
+  }
 }

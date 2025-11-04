@@ -1,99 +1,115 @@
 .footer {
   width: 100%;
   margin: 0;
-  padding: 10px 2%;
-  background: black;
-  text-align: center;
-  border-top: 5px solid rgb(168, 168, 168);
+  padding: 50px 2% 30px 2%; /* Mais respiro */
+  background: #000;
+  text-align: left; /* Alinhamento mais profissional que 'center' */
+  border-top: 1px solid #333; /* Borda mais sutil */
 }
 
 .footer > .container {
-  padding: 10px 2%;
+  padding: 0; /* Remove padding duplicado */
 }
 
 .box-footer {
   width: 100%;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar no mobile */
+  justify-content: space-between;
+  gap: 40px; /* Espaço entre as colunas */
+  margin-bottom: 40px; /* Espaço até o copyright */
 }
 
 .box-footer-single {
-  width: 33.3%;
+  flex: 1; /* Faz as colunas dividirem o espaço */
+  min-width: 280px; /* Ponto de quebra para o 'wrap' */
 }
 
-.bfs1 h2,
-.bfs3 ul {
-  text-align: left;
-  margin-left: 60px;
+.box-footer-single h2 {
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 25px;
 }
 
-.sm-icons-footer i {
-  font-size: 38px;
-  color: white;
-  padding: 20px;
-}
-
-.bfs3 ul {
-  list-style-type: circle;
-}
-
-.bfs3 ul li a {
-  color: white;
+/* --- Coluna 1 (Whatsapp) --- */
+.bfs1 .whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
-  line-height: 20px;
+  color: #CCCCCC;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.bfs1 .whatsapp-link:hover { color: #25d366; }
+.bfs1 .whatsapp-icon { 
+    color: #25d366; 
+    font-size: 1.4rem; 
 }
 
+/* --- Coluna 2 (Redes Sociais) --- */
+.sm-icons-footer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.sm-icons-footer a {
+  color: #CCCCCC;
+  font-size: 2rem; /* 32px */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.sm-icons-footer a:hover {
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* --- Coluna 3 (Links) --- */
+.bfs3 ul {
+  list-style-type: none; /* Remove bolinhas */
+  padding-left: 0;
+  margin-left: 0;
+}
+.bfs3 ul li {
+  margin-bottom: 12px; /* Espaça os links */
+}
+.bfs3 ul li a {
+  color: #CCCCCC;
+  text-decoration: none;
+  line-height: 1.5;
+}
 .bfs3 ul li a:hover {
   text-decoration: underline;
+  color: #FFFFFF;
 }
 
-.footer small {
-  font-size: 10px;
+/* --- Copyright --- */
+.copyright {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  color: #888; /* Cinza mais sutil */
+}
+.copyright small {
+  display: block;
+  font-size: 0.8rem; /* 12px */
+  line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .box-footer {
-    flex-wrap: wrap;
-  }
-
-  .bfs1,
-  .bfs2 {
-    width: 50%;
-  }
-
-  .bfs3 {
-    width: 100%;
-  }
-
-  .bfs3 ul {
-    width: 60%;
-    margin: 0 auto;
-  }
-}
-
+/* --- Responsividade --- */
 @media (max-width: 500px) {
   .box-footer {
-    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
   }
-
-  .box-footer-single {
-    width: 100%;
+  .bfs1 .whatsapp-link {
+    justify-content: center;
   }
-
-	.bfs1 h2 {
-		margin-left: 30px;
-	}
-
-  .bfs2,
-  .bfs3 {
-    padding-top: 20px;
+  .sm-icons-footer {
+    justify-content: center;
   }
-
   .bfs3 ul {
-    width: 90%;
+    padding-left: 0;
   }
-
-	.bfs3 ul li a {
-		font-size: 14px;
-	}
-
 }

@@ -1,42 +1,119 @@
-.box-Duvidas {
+/* Container principal das dúvidas */
+.box-duvidas {
   width: 100%;
+  max-width: 800px; /* Limita a largura para melhor leitura */
+  margin: 20px auto;
 }
 
-.art2 {
-  display: none;
-  padding-top: 1px;
-}
-
+/* Container de cada Pergunta/Resposta */
 .art-single {
-  width: 80%;
-  background-color: white;
+  width: 100%;
+  /* MUDANÇA: Fundo escuro, cor de texto clara */
+  background-color: #1a1a1a; /* Mesmo fundo dos campos do formulário */
   margin: 10px auto;
   text-align: left;
-  color: black;
-  padding: 7px 10px;
-  border-radius: 15px;
+  color: #CCCCCC; /* Cor de texto padrão (cinza-claro) */
+  border-radius: 10px;
+  /* MUDANÇA: Remove sombra e adiciona borda sutil */
+  border: 1px solid #333;
+  overflow: hidden; 
+  transition: all 0.3s ease;
 }
 
-.art-single span {
-  font-size: 12px;
-}
-
-.art-single p {
-  text-decoration: none;
-  color: black;
+/* Estilo para a Pergunta (o 'botão' clicável) */
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
   cursor: pointer;
 }
 
-.art-single p:hover {
-  text-decoration: underline;
+/* Parágrafo dentro da pergunta */
+.faq-question p {
+  margin: 0;
+  padding-right: 15px; 
+  font-weight: 600;
+  font-size: 1.1rem;
+  /* MUDANÇA: Cor da pergunta em branco para destaque */
+  color: #FFFFFF;
+  transition: color 0.3s ease;
 }
 
-.nav-art {
+/* ADICIONADO: Efeito hover na pergunta */
+.faq-question:hover p {
+  color: #25d366; /* Destaque verde (do seu Whatsapp) no hover */
+}
+
+/* Ícone (seta) */
+.faq-question svg {
+  /* MUDANÇA: Cor do ícone para cinza-claro */
+  color: #CCCCCC;
+  transition: transform 0.3s ease;
+  flex-shrink: 0; 
+}
+
+/* Estilo para a Resposta */
+.faq-answer {
+  max-height: 0; /* COMEÇA FECHADO */
+  overflow: hidden;
+  /* MUDANÇA: Fundo da resposta ligeiramente diferente */
+  background-color: #111111;
+  transition: max-height 0.4s ease-out; /* Animação de deslize */
+}
+
+/* Parágrafo dentro da resposta */
+.faq-answer p {
+  padding: 20px;
+  margin: 0;
+  line-height: 1.6;
+  /* MUDANÇA: Cor do texto da resposta (cinza-claro) */
+  color: #CCCCCC;
+  /* MUDANÇA: Borda sutil para tema escuro */
+  border-top: 1px solid #333; 
+}
+
+/* --- LÓGICA DE ABRIR (Sem alteração) --- */
+.art-single.active .faq-answer {
+  max-height: 500px; /* ABRE */
+}
+
+.art-single.active .faq-question svg {
+  transform: rotate(180deg);
+}
+
+/* --- ESTILO DO BOTÃO "MAIS PERGUNTAS" (Sem alteração) --- */
+/* Seu botão já é claro (rgb(200, 200, 200)) com texto escuro (black),
+   o que funciona perfeitamente no fundo preto.
+*/
+.nav-duvidas {
   width: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.nav-art i {
-  margin: 10px auto;
-  font-size: 35px;
+.btn-mais {
+  background-color: rgb(200, 200, 200);
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 30px;
   cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-mais:hover {
+  background-color: rgb(170, 170, 170);
+}
+
+/* Remove estilos antigos não utilizados (Sem alteração) */
+.art2,
+.art-single span,
+.nav-art {
+  display: none;
 }
