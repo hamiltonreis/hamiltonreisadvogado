@@ -13,15 +13,21 @@ const OAdvogado = () => {
           </div>
           <div className="advogado-text">
             <h2>Dr. Hamilton Reis</h2>
-            <h3>Advogado Criminalista, Pós-graduado em Advocacia Criminal</h3>
+            <h3>Advogado Especialista em Direito Criminal</h3>
             <p>
-              Minha atuação é dedicada exclusivamente à defesa de pessoas em investigações e processos criminais. Compreendo a complexidade e a urgência que envolvem uma acusação criminal, e por isso, meu compromisso é oferecer uma defesa técnica, combativa e intransigente na garantia dos seus direitos.
+              Sou advogado especialista em Direito Criminal, com atuação dedicada à defesa e à orientação de pessoas envolvidas em investigações e processos criminais — seja na condição de réu ou de vítima.
             </p>
             <p>
-              Ofereço um atendimento direto e humanizado, focado em oferecer segurança e tranquilidade não apenas ao cliente, mas também aos seus familiares, explicando cada etapa do processo com clareza e honestidade.
+              Se você enfrenta uma situação de flagrante, busca e apreensão, mandado de prisão ou já cumpre pena, meu compromisso é oferecer uma defesa técnica, estratégica e incansável, utilizando todos os instrumentos legais possíveis para preservar sua liberdade e garantir a plena proteção dos seus direitos.
             </p>
             <p>
-              A prática do escritório é pautada pela total discrição, seriedade e pelo compromisso absoluto com a melhor estratégia jurídica para cada caso.
+              Cada cliente é atendido com respeito, humanidade e absoluta discrição. Acompanho de perto todas as fases do processo — da delegacia ao tribunal — garantindo que você e sua família compreendam cada etapa e se sintam amparados em todas as decisões.
+            </p>
+            <p>
+              Entendo que um processo criminal não afeta apenas quem responde a ele, mas também quem está ao redor. Por isso, meu trabalho se estende aos familiares, oferecendo apoio, clareza e segurança durante todo o percurso.
+            </p>
+            <p>
+              No meu escritório, clareza, honestidade e dedicação não são apenas princípios — são compromissos reais com cada pessoa que me confia sua defesa. <strong>Estarei ao seu lado em cada passo, até o fim.</strong>
             </p>
           </div>
         </div>

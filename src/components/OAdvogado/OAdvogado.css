@@ -1,81 +1,92 @@
 /* Estilo da seção principal */
 .o-advogado {
-  padding: 60px 0;
+  padding: 70px 0; /* levemente maior para dar mais "respiro" */
   color: #CCCCCC;
+  background-color: #0F0F0F; /* opcional: fundo sutil se quiser destacar a seção */
 }
 
 /* Container que alinha a imagem e o texto */
 .advogado-content {
   display: flex;
-  align-items: center; 
-  gap: 40px; 
+  align-items: flex-start; /* melhor que center para textos longos */
+  gap: 50px; /* leve aumento melhora proporção visual */
   padding: 0 20px;
 }
 
 /* Container da imagem */
 .advogado-img {
-  flex: 1; 
-  max-width: 400px; 
+  flex: 1;
+  max-width: 380px; /* ligeiramente menor melhora equilíbrio */
 }
 
 .advogado-img img {
   width: 100%;
-  aspect-ratio: 1 / 1;  
-  object-fit: cover;    
-  border-radius: 15px;  
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* sombra mais suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advogado-img img:hover {
+  transform: scale(1.02); /* micro efeito de destaque */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 /* Container do texto */
 .advogado-text {
   flex: 2;
   text-align: left;
+  color: #DDDDDD;
 }
 
 .advogado-text h2 {
-  font-size: 2rem; 
+  font-size: 2.2rem;
   margin-top: 0;
   margin-bottom: 10px;
-  color: #FFFFFF; 
+  color: #FFFFFF;
 }
 
 .advogado-text h3 {
-  font-size: 1.15rem; 
+  font-size: 1.2rem;
   font-weight: 600;
   font-style: italic;
-  color: #DDDDDD;
+  color: #BBBBBB;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .advogado-text p {
-  font-size: 1.1rem; 
-  line-height: 1.7; 
-  margin-bottom: 15px;
-  text-align: justify; /* <-- ADICIONADO: Texto justificado */
+  font-size: 1.1rem;
+  line-height: 1.8; /* leitura mais confortável */
+  margin-bottom: 18px;
+  text-align: justify;
 }
 
-/* Ajuste para telas menores (mobile) */
+/* Ênfase no final */
+.advogado-text strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   .advogado-content {
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
+    gap: 25px;
   }
 
   .advogado-img {
-    max-width: 300px; 
-    margin-bottom: 20px;
+    max-width: 280px;
+    margin: 0 auto 25px;
   }
 
   .advogado-text {
-    /* O flex: 2; não se aplica aqui, volta ao normal */
-    text-align: justify; /* <-- ADICIONADO: Justificado no mobile também */
+    text-align: justify;
   }
 
-  .advogado-text h2 {
-    text-align: center;
-  }
-  
+  .advogado-text h2,
   .advogado-text h3 {
     text-align: center;
   }
