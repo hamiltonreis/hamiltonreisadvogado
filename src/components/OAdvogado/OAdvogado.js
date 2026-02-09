@@ -9,7 +9,7 @@ const OAdvogado = () => {
         <h1>O Advogado</h1>
         <div className="advogado-content">
           <div className="advogado-img">
-            <img src={require("../../media/equipe02.jpg").default} alt="Dr. Hamilton Reis" />
+            <img src={require("../../media/equipe00.png").default} alt="Dr. Hamilton Reis" />
           </div>
           <div className="advogado-text">
             <h2>Dr. Hamilton Reis</h2>
