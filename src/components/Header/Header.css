@@ -1,58 +1,100 @@
-header {
-  width: 100%;
-  height: 115px;
-  padding: 0 3%;
-  background-color: black;
-  position: fixed;
-  border-bottom: 5px solid rgb(168, 168, 168);
-  z-index: 99;
+.site-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	padding: 22px 0;
+	transition: padding 0.4s ease, background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
-.fix-header {
-  height: 115px;
+.site-header.is-scrolled {
+	padding: 12px 0;
+	background: rgba(10, 11, 13, 0.72);
+	backdrop-filter: blur(14px) saturate(140%);
+	-webkit-backdrop-filter: blur(14px) saturate(140%);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.header-left {
-  width: 40%;
-  display: flex;
-  overflow: hidden;
+.site-header-inner {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 32px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
 }
 
-.header-left img {
-  /* REMOVIDO: 'max-height: 100%;'
-    Esta era a linha que causava o problema. 
-  */
+.brand {
+	display: inline-flex;
+	align-items: center;
 }
 
-.header-right {
-  width: 60%;
-  justify-content: right;
-  display: flex;
-  flex-direction: column-reverse;
+.brand img {
+	height: 40px;
+	width: auto;
+	display: block;
+	filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35));
+	transition: transform 0.4s ease;
 }
 
-@media (max-width: 1080px) {
-  .header-right {
-    flex-direction: row-reverse;
-    align-items: center;
-  }
+.brand:hover img {
+	transform: translateY(-1px) scale(1.02);
 }
 
-@media (max-width: 768px) {
-  .header-left {
-    width: 60%;
-  }
+.header-tagline {
+	font-family: var(--font-mono);
+	font-size: 11px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--color-muted);
+}
 
-  .header-right {
-    width: 40%;
-  }
+.btn-voltar {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	color: var(--color-ink);
+	padding: 10px 18px;
+	border-radius: 999px;
+	font-size: 13px;
+	letter-spacing: 0.03em;
+	cursor: pointer;
+	transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
 
-  header,
-  .fix-header {
-    height: 80px;
-  }
+.btn-voltar svg {
+	width: 15px;
+	height: 15px;
+}
 
-  .header-left img {
-     /* Esta regra não é mais necessária aqui */
-  }
+.icon-flip {
+	transform: rotate(180deg);
+}
+
+.btn-voltar:hover {
+	background: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.3);
+	transform: translateX(-2px);
+}
+
+@media (max-width: 560px) {
+	.site-header-inner {
+		padding: 0 18px;
+	}
+
+	.brand img {
+		height: 32px;
+	}
+
+	.btn-voltar span {
+		display: none;
+	}
+
+	.btn-voltar {
+		padding: 10px;
+	}
 }

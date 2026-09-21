@@ -1,0 +1,87 @@
+.advogado-section {
+	background: var(--color-bg);
+	padding: 120px 2%;
+}
+
+.advogado-container {
+	max-width: 1180px;
+	background: transparent !important;
+	display: grid;
+	grid-template-columns: 0.8fr 1.2fr;
+	gap: 72px;
+	align-items: center;
+	text-align: left;
+}
+
+.advogado-photo {
+	position: relative;
+	max-width: 360px;
+}
+
+.advogado-photo img {
+	width: 100%;
+	display: block;
+	border-radius: 18px;
+	filter: grayscale(0.35) contrast(1.05);
+	box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.advogado-photo-frame {
+	position: absolute;
+	top: 18px;
+	left: 18px;
+	right: -18px;
+	bottom: -18px;
+	border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+	border-radius: 18px;
+	z-index: -1;
+}
+
+.section-eyebrow {
+	font-family: var(--font-mono);
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: var(--accent, var(--color-gold));
+	margin-bottom: 14px;
+	text-align: left;
+}
+
+.advogado-copy h2 {
+	font-family: var(--font-display);
+	font-size: clamp(30px, 4vw, 44px);
+	text-align: left;
+	padding-bottom: 6px;
+	color: var(--color-ink);
+}
+
+.advogado-copy h3 {
+	text-align: left;
+	font-weight: 500;
+	color: var(--color-muted);
+	font-size: 16px;
+	padding-bottom: 24px;
+}
+
+.advogado-copy p {
+	color: var(--color-muted);
+	line-height: 1.85;
+	margin-bottom: 18px;
+	font-size: 15.5px;
+}
+
+.advogado-copy p strong {
+	color: var(--color-ink);
+}
+
+@media (max-width: 900px) {
+	.advogado-container {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.advogado-photo {
+		max-width: 260px;
+		margin: 0 auto;
+	}
+}
