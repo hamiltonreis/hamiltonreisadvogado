@@ -1,115 +1,102 @@
 .footer {
-  width: 100%;
-  margin: 0;
-  padding: 50px 2% 30px 2%; /* Mais respiro */
-  background: #000;
-  text-align: left; /* Alinhamento mais profissional que 'center' */
-  border-top: 1px solid #333; /* Borda mais sutil */
+	background: var(--color-bg-alt);
+	border-top: 1px solid rgba(255, 255, 255, 0.06);
+	padding: 72px 0 28px;
 }
 
-.footer > .container {
-  padding: 0; /* Remove padding duplicado */
+.footer-container {
+	background: transparent !important;
+	max-width: 1320px;
+	padding: 0 32px;
 }
 
-.box-footer {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap; /* Permite quebrar no mobile */
-  justify-content: space-between;
-  gap: 40px; /* Espaço entre as colunas */
-  margin-bottom: 40px; /* Espaço até o copyright */
+.footer-grid {
+	display: grid;
+	grid-template-columns: 1.4fr 1fr 1fr;
+	gap: 48px;
+	text-align: left;
+	padding-bottom: 40px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.box-footer-single {
-  flex: 1; /* Faz as colunas dividirem o espaço */
-  min-width: 280px; /* Ponto de quebra para o 'wrap' */
+.footer-brand img {
+	height: 34px;
+	margin-bottom: 18px;
 }
 
-.box-footer-single h2 {
-  font-size: 1.25rem;
-  color: #FFFFFF;
-  margin-bottom: 1px;
+.footer-brand p {
+	color: var(--color-muted);
+	font-size: 14px;
+	line-height: 1.7;
+	max-width: 320px;
+	margin-bottom: 18px;
 }
 
-/* --- Coluna 1 (Whatsapp) --- */
-.bfs1 .whatsapp-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: #CCCCCC;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-.bfs1 .whatsapp-link:hover { color: #25d366; }
-.bfs1 .whatsapp-icon { 
-    color: #25d366; 
-    font-size: 1.4rem; 
+.footer-whats {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--color-ink);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 15px;
 }
 
-/* --- Coluna 2 (Redes Sociais) --- */
-.sm-icons-footer {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-.sm-icons-footer a {
-  color: #CCCCCC;
-  font-size: 2rem; /* 32px */
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.sm-icons-footer a:hover {
-  color: #FFFFFF;
-  transform: scale(1.1);
+.footer-whats svg {
+	width: 18px;
+	height: 18px;
+	color: #25d366;
 }
 
-/* --- Coluna 3 (Links) --- */
-.bfs3 ul {
-  list-style-type: none; /* Remove bolinhas */
-  padding-left: 0;
-  margin-left: 0;
-}
-.bfs3 ul li {
-  margin-bottom: 12px; /* Espaça os links */
-}
-.bfs3 ul li a {
-  color: #CCCCCC;
-  text-decoration: none;
-  line-height: 1.5;
-}
-.bfs3 ul li a:hover {
-  text-decoration: underline;
-  color: #FFFFFF;
+.footer-col h2 {
+	text-align: left;
+	font-size: 13px;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--color-muted);
+	padding-bottom: 18px;
+	font-weight: 600;
 }
 
-/* --- Copyright --- */
+.footer-col ul li {
+	list-style: none;
+	margin-bottom: 12px;
+}
+
+.footer-col a {
+	color: var(--color-ink);
+	text-decoration: none;
+	font-size: 14.5px;
+	opacity: 0.85;
+	transition: opacity 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-col a:hover {
+	opacity: 1;
+	padding-left: 4px;
+	color: var(--color-gold);
+}
+
 .copyright {
-  border-top: 1px solid #333;
-  padding-top: 20px;
-  text-align: center;
-  color: #888; /* Cinza mais sutil */
-}
-.copyright small {
-  display: block;
-  font-size: 0.8rem; /* 12px */
-  line-height: 1.5;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding-top: 24px;
+	text-align: center;
 }
 
-/* --- Responsividade --- */
-@media (max-width: 500px) {
-  .box-footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 30px;
-  }
-  .bfs1 .whatsapp-link {
-    justify-content: center;
-  }
-  .sm-icons-footer {
-    justify-content: center;
-  }
-  .bfs3 ul {
-    padding-left: 0;
-  }
+.copyright small {
+	color: var(--color-muted);
+	font-size: 12.5px;
+}
+
+@media (max-width: 860px) {
+	.footer-grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.footer-brand p {
+		max-width: none;
+	}
 }
