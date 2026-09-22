@@ -18,8 +18,7 @@ const areas = [
 		nome: 'Direito do Trabalho',
 		nomeCurto: 'Trabalhista',
 		Icon: IconTrabalhista,
-		accent: '#5b8aa6',
-		accentSoft: '#233642',
+		accent: '#276f64',
 		resumo: 'Para quem foi demitido, não recebeu o que tinha direito, sofreu assédio no trabalho ou tem dúvidas sobre a carteira assinada.',
 		exemplos: [
 			'Fui demitido e não recebi todas as verbas',
@@ -111,8 +110,7 @@ const areas = [
 		nome: 'Direito Previdenciário',
 		nomeCurto: 'Previdenciário',
 		Icon: IconPrevidenciario,
-		accent: '#b9924c',
-		accentSoft: '#3a3120',
+		accent: '#96650f',
 		resumo: 'Para quem quer se aposentar, teve benefício negado pelo INSS, está afastado por doença ou cuida de um familiar que precisa de auxílio.',
 		exemplos: [
 			'Meu benefício foi negado pelo INSS',
@@ -204,8 +202,7 @@ const areas = [
 		nome: 'Direito de Família',
 		nomeCurto: 'Família',
 		Icon: IconFamilia,
-		accent: '#a8768a',
-		accentSoft: '#332530',
+		accent: '#9c4e33',
 		resumo: 'Para quem está passando por divórcio, disputa de guarda, pensão alimentícia, partilha de bens ou inventário.',
 		exemplos: [
 			'Quero me divorciar e dividir os bens',
@@ -297,8 +294,7 @@ const areas = [
 		nome: 'Direito Criminal',
 		nomeCurto: 'Criminal',
 		Icon: IconCriminal,
-		accent: '#a34b4b',
-		accentSoft: '#3a2222',
+		accent: '#8c3a3a',
 		resumo: 'Para quem foi preso, está sendo investigado, precisa responder a um processo criminal ou foi vítima de um crime.',
 		exemplos: [
 			'Fui preso ou vou prestar depoimento',

@@ -29,7 +29,7 @@ const AreaSelector = () => (
 							className="area-card"
 							key={area.slug}
 							delay={index * 90}
-							style={{ '--accent': area.accent, '--accent-soft': area.accentSoft }}
+							style={{ '--accent': area.accent }}
 						>
 							<div className="area-card-top">
 								<span className="area-card-icon">

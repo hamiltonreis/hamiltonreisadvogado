@@ -7,8 +7,8 @@
 	padding: 160px 2% 0;
 	overflow: hidden;
 	background:
-		radial-gradient(60% 50% at 15% 15%, rgba(65, 77, 86, 0.35), transparent 60%),
-		radial-gradient(55% 45% at 85% 25%, rgba(185, 146, 76, 0.14), transparent 60%),
+		radial-gradient(60% 50% at 15% 15%, rgba(27, 58, 75, 0.07), transparent 60%),
+		radial-gradient(55% 45% at 85% 25%, rgba(232, 163, 61, 0.14), transparent 60%),
 		var(--color-bg);
 }
 
@@ -16,7 +16,7 @@
 	position: absolute;
 	inset: 0;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
-	mix-blend-mode: overlay;
+	mix-blend-mode: multiply;
 	pointer-events: none;
 }
 
@@ -34,7 +34,7 @@
 	font-size: 12.5px;
 	letter-spacing: 0.22em;
 	text-transform: uppercase;
-	color: var(--color-gold);
+	color: var(--color-gold-ink);
 	margin-bottom: 28px;
 }
 
@@ -85,6 +85,7 @@
 	transform: translateY(-3px);
 	gap: 20px;
 	background: var(--color-gold);
+	color: var(--color-ink);
 }
 
 @keyframes bounce-down {
@@ -96,8 +97,8 @@
 	position: relative;
 	margin-top: 90px;
 	padding: 26px 0;
-	border-top: 1px solid rgba(255, 255, 255, 0.08);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	border-top: 1px solid rgba(27, 58, 75, 0.12);
+	border-bottom: 1px solid rgba(27, 58, 75, 0.12);
 	overflow: hidden;
 	white-space: nowrap;
 }
@@ -124,7 +125,7 @@
 	height: 8px;
 	margin-left: 28px;
 	border-radius: 50%;
-	background: var(--color-gold);
+	background: var(--color-gold-ink);
 	font-style: normal;
 }
 

@@ -3,7 +3,7 @@
 	padding: 200px 2% 120px;
 	overflow: hidden;
 	background:
-		radial-gradient(60% 60% at 50% -10%, var(--accent-soft) 0%, transparent 65%),
+		radial-gradient(60% 60% at 50% -10%, color-mix(in srgb, var(--accent) 16%, transparent) 0%, transparent 65%),
 		var(--color-bg);
 	isolation: isolate;
 }
@@ -12,9 +12,9 @@
 	position: absolute;
 	inset: -20% -20% auto -20%;
 	height: 700px;
-	background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 35%, transparent), transparent 70%);
+	background: radial-gradient(closest-side, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%);
 	filter: blur(10px);
-	opacity: 0.5;
+	opacity: 0.35;
 	pointer-events: none;
 	z-index: -1;
 }
@@ -23,9 +23,9 @@
 	position: absolute;
 	inset: 0;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-	mix-blend-mode: overlay;
+	mix-blend-mode: multiply;
 	pointer-events: none;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .area-hero-container {

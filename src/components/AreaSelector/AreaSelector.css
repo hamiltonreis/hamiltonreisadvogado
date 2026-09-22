@@ -38,7 +38,7 @@
 	text-align: left;
 	text-decoration: none;
 	background: var(--color-surface);
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(27, 58, 75, 0.1);
 	border-radius: 22px;
 	padding: 36px;
 	overflow: hidden;
@@ -49,7 +49,7 @@
 	content: '';
 	position: absolute;
 	inset: 0;
-	background: radial-gradient(420px 220px at 100% 0%, var(--accent-soft), transparent 70%);
+	background: radial-gradient(420px 220px at 100% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 70%);
 	opacity: 0;
 	transition: opacity 0.5s ease;
 	pointer-events: none;

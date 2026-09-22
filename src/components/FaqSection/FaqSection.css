@@ -29,7 +29,7 @@
 }
 
 .faq-item {
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(27, 58, 75, 0.12);
 	border-radius: 14px;
 	background: var(--color-surface);
 	overflow: hidden;
@@ -95,7 +95,7 @@
 	margin: 40px auto 0;
 	display: block;
 	background: none;
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	border: 1px solid rgba(27, 58, 75, 0.22);
 	color: var(--color-ink);
 	padding: 12px 28px;
 	border-radius: 999px;
