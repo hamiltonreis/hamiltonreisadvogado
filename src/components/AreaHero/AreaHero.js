@@ -8,10 +8,7 @@ const AreaHero = ({ area }) => {
 	return (
 		<section
 			className="area-hero"
-			style={{
-				'--accent': area.accent,
-				'--accent-soft': area.accentSoft,
-			}}
+			style={{ '--accent': area.accent }}
 		>
 			<div className="area-hero-noise" aria-hidden="true" />
 			<div className="area-hero-glow" aria-hidden="true" />

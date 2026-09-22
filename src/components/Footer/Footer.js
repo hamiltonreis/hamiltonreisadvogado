@@ -17,7 +17,7 @@ const Footer = () => {
 					<div className="footer-brand">
 						<img src={logo} alt={site.nome} />
 						<p>
-							Atendimento na <strong>{site.estados.join(', ')}</strong> e remotamente em todo o Brasil.
+							Atendimento na <strong>{site.estados.join(', ')}</strong> e em todo o Brasil.
 						</p>
 						<a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="footer-whats">
 							<IconWhatsapp />

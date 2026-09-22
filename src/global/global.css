@@ -3,14 +3,14 @@
 	--font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 	--font-mono: 'Space Mono', 'Courier New', monospace;
 
-	--color-bg: #08090b;
-	--color-bg-alt: #101317;
-	--color-surface: #15181d;
-	--color-surface-hover: #1b1f25;
-	--color-ink: #f4f2ec;
-	--color-muted: #9aa0a6;
-	--color-slate: #414d56;
-	--color-gold: #b9924c;
+	--color-bg: #f5f2ed;
+	--color-bg-alt: #efe7d9;
+	--color-surface: #ffffff;
+	--color-surface-hover: #fbf7ee;
+	--color-ink: #1b3a4b;
+	--color-muted: #52646d;
+	--color-gold: #e8a33d;
+	--color-gold-ink: #96650f;
 }
 
 * {
@@ -102,7 +102,7 @@ section {
 
 ::selection {
 	background: var(--color-gold);
-	color: #14171b;
+	color: var(--color-ink);
 }
 
 @media (max-width: 460px) {

@@ -2,7 +2,7 @@
 	position: relative;
 	padding: 140px 2%;
 	background:
-		radial-gradient(50% 80% at 50% 100%, var(--accent-soft, transparent) 0%, transparent 70%),
+		radial-gradient(50% 80% at 50% 100%, color-mix(in srgb, var(--accent, transparent) 18%, transparent) 0%, transparent 70%),
 		var(--color-bg-alt);
 	text-align: center;
 	overflow: hidden;
@@ -62,7 +62,7 @@
 	font-size: 12.5px;
 	letter-spacing: 0.04em;
 	color: var(--color-muted);
-	border: 1px solid rgba(255, 255, 255, 0.14);
+	border: 1px solid rgba(27, 58, 75, 0.18);
 	padding: 8px 16px;
 	border-radius: 999px;
 }

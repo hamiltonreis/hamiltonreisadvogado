@@ -23,7 +23,7 @@
 	display: block;
 	border-radius: 18px;
 	filter: grayscale(0.35) contrast(1.05);
-	box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 24px 48px -18px rgba(27, 58, 75, 0.35);
 }
 
 .advogado-photo-frame {
@@ -42,7 +42,7 @@
 	font-size: 12px;
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
-	color: var(--accent, var(--color-gold));
+	color: var(--accent, var(--color-gold-ink));
 	margin-bottom: 14px;
 	text-align: left;
 }

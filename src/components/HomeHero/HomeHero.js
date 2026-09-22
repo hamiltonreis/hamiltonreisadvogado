@@ -18,7 +18,8 @@ const HomeHero = () => (
 				hoje?
 			</h1>
 			<p className="home-hero-subtitle">
-				Role para baixo e escolha a situação que mais se parece com a sua. Receba dicas e entre em contato conosco.
+				Role para baixo e escolha a situação que mais se parece com a sua.
+				Receba dicas e entre em contato conosco.
 			</p>
 
 			<a href="#escolher-area" className="home-hero-cta">
