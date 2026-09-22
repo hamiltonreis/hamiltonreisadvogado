@@ -11,15 +11,14 @@ const HomeHero = () => (
 		<div className="home-hero-content">
 			<p className="home-hero-eyebrow">Hamilton Reis Advocacia</p>
 			<h1 className="home-hero-title">
-				Qual é o seu
+				Como
 				<br />
-				<span>problema jurídico</span>
+				<span>POSSO TE AJUDAR</span>
 				<br />
 				hoje?
 			</h1>
 			<p className="home-hero-subtitle">
-				Escolha a situação que mais se parece com a sua e receba orientação clara,
-				direta e humana — sem juridiquês.
+				Role para baixo e escolha a situação que mais se parece com a sua. Receba dicas e entre em contato conosco.
 			</p>
 
 			<a href="#escolher-area" className="home-hero-cta">

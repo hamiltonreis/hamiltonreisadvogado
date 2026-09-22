@@ -26,7 +26,7 @@ const ContatoSection = ({ area }) => (
 				</div>
 
 				<ul className="contato-abrangencia">
-					{[...site.estados, 'e todo o Brasil'].map((lugar) => (
+					{[...site.estados, 'Todo o Brasil'].map((lugar) => (
 						<li key={lugar}>{lugar}</li>
 					))}
 				</ul>
