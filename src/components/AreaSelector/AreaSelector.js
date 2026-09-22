@@ -15,8 +15,8 @@ const AreaSelector = () => (
 				Em qual dessas situações você se encontra?
 			</Reveal>
 			<Reveal as="p" className="area-selector-subtitle" delay={80}>
-				Escolha a área que mais combina com o seu momento. Você verá explicações
-				simples, os assuntos mais comuns e poderá voltar para trocar de tema quando quiser.
+				Escolha a área que mais combina com o seu problema. Você verá explicações
+				simples, os assuntos mais comuns e poderá nos contar mais detalhes.
 			</Reveal>
 
 			<div className="area-cards">

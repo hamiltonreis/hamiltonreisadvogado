@@ -53,6 +53,7 @@
 	color: transparent;
 	-webkit-text-stroke: 1.5px var(--color-ink);
 	font-style: italic;
+	text-transform: uppercase;
 }
 
 .home-hero-subtitle {
